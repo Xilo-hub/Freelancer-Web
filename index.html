@@ -1,180 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diseñador Freelancer</title>
+    <title>INTERNET KPAM</title>
     
-    <link rel="preload" href="normalize.css" as="style">
-    <link rel="stylesheet" href="normalize.css">
-    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="preload" href="37_styles.css" as="style">
-    <link rel="stylesheet" href="47_styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        
+        .text-morado { color: #7c3aed !important; }  /* Colores */
+        .text-claro { color: #64748b !important; }
+        
+        
+        .btn-esmeralda {              /* Botones personalizados */
+            background-color: #10b981;
+            color: #ffffff;
+            box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3);
+            border-radius: 50rem;
+            padding: 0.8rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-esmeralda:hover {
+            background-color: #059669;
+            color: #ffffff;
+            transform: translateY(-3px);
+        }
+
+        .btn-morado {
+            background-color: #7c3aed;
+            color: #ffffff;
+            border-radius: 50rem;
+            padding: 0.8rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-morado:hover {
+            background-color: #5b21b6;
+            color: #ffffff;
+        }
+
+        
+        .navbar-glass {    /* Navegación tipo cristal */
+            background: rgba(255, 255, 255, 0.8);   
+            backdrop-filter: blur(10px);
+            border-radius: 50rem;
+            border: 1px solid rgba(255,255,255,0.5);
+            margin-top: 1rem;
+        }
+
+        /* hero */
+        .hero-section {
+            background-image: 
+                linear-gradient(rgba(124, 58, 237, 0.7), rgba(59, 130, 246, 0.8)),
+                url('ImagenPrin.png');
+            background-size: cover;          
+            background-position: center;     
+            background-repeat: no-repeat;
+            min-height: 80vh;
+        }
+
+        /* Tarjetas de servicio */
+        .card-servicio {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 1.5rem;
+        }
+        .card-servicio:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(124, 58, 237, 0.2) !important;
+        }
+
+        /* Iconos inclinados */
+        .icono-container {
+            width: 5rem;
+            height: 5rem;
+            background-color: #ecfdf5;
+            color: #10b981;
+            border-radius: 1rem;
+            transform: rotate(-10deg);
+        }
+        
+        /* Foco en inputs */
+        .form-control:focus {
+            border-color: #7c3aed;
+            box-shadow: 0 0 0 0.25rem rgba(124, 58, 237, 0.25);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1 class="titulo"> Ricardo Martínez Salazar <span> Freelancer </span> </h1>
-    </header>
 
-    <div class="nav-bg">
-        <nav class="navegacion-principal contenedor">
-            <a href="17_nosotros.html">Inicio</a>
-            <a href="#">Sobre Mi</a>
-            <a href="#">Clientes</a>
-            <a href="#">Contacto</a>
-            <a href="https://www.linkedin.com/in/ricardo-mart%C3%ADnez-b0926213/"> linkedin </a>
+    <div class="container fixed-top">
+        <nav class="navbar navbar-expand-md navbar-light navbar-glass shadow-sm px-4 py-2">
+            <a class="navbar-brand fw-bold fs-4" href="#">INTERNET <span class="text-morado">KPAM.</span></a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <div class="navbar-nav fw-semibold gap-3">
+                    <a class="nav-link text-claro" href="#">Inicio</a>
+                    <a class="nav-link text-claro" href="#servicios">Ventajas</a>
+                    <a class="nav-link text-claro" href="#contacto">Cobertura</a>
+                </div>
+            </div>
         </nav>
     </div>
 
-    <section class="hero">
-        <div class="contenido-hero">
-            <h1 class="titulo">Diseño y Desarrollo Web Freelancer</h1>
-            <div class="ubicacion">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="88" height="88" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffbf00" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z"/>
-                <circle cx="12" cy="11" r="3" />
-                <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1 -2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z" />
-            </svg>
-            <p> México, CDMX</p>
-            
-        </div>
-        <a class="boton" href="#">Contactar</a>
-        </div>
-    </section>
-
-<main class="contenedor sombra">
-        <h2> Mis Servicios </h2>
-
-        <div class="servicios">
-            <section class="servicio">
-                <h3> Diseño Web </h3>
-                <div class="iconos"> 
-                    <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="44"
-                    height="44"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="1"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    >
-                    <path d="M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25" />
-                    <path d="M8.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                    <path d="M12.5 7.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                    <path d="M16.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                    </svg>
+    <section class="hero-section d-flex align-items-center text-center text-white pt-5">
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="display-3 fw-bold mb-4">Fibra óptica real para tu hogar</h1>
+                    <p class="lead mb-5 opacity-75">Conéctate a la velocidad de la luz. Sin interrupciones, sin plazos forzosos y con instalación en 24 horas.</p>
+                    <a href="#contacto" class="btn btn-esmeralda btn-lg">Verificar Disponibilidad</a>
                 </div>
-                <p> Dolor sit amet consectetur adipisicing elit. Cupiditate culpa incidunt autem omnis magni corporis ipsa illum amet eaque voluptates asperiores ratione optio voluptate. </p>
-            </section>
-
-            <section class="servicio">
-                <h3>Aplicaciones Web</h3>
-                <div class="iconos">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="44"
-                        height="44"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#000000"
-                        stroke-width="1"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    >
-                        <path d="M4 10l0 6" />
-                        <path d="M20 10l0 6" />
-                        <path d="M7 9h10v8a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-8a5 5 0 0 1 10 0" />
-                        <path d="M8 3l1 2" />
-                        <path d="M16 3l-1 2" />
-                        <path d="M9 18l0 3" />
-                        <path d="M15 18l0 3" />
-                    </svg>
-
-                    <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="44"
-                    height="44"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="1"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    >
-                    <path d="M8.286 7.008c-3.216 0 -4.286 3.23 -4.286 5.92c0 3.229 2.143 8.072 4.286 8.072c1.165 -.05 1.799 -.538 3.214 -.538c1.406 0 1.607 .538 3.214 .538s4.286 -3.229 4.286 -5.381c-.03 -.011 -2.649 -.434 -2.679 -3.23c-.02 -2.335 2.589 -3.179 2.679 -3.228c-1.096 -1.606 -3.162 -2.113 -3.75 -2.153c-1.535 -.12 -3.032 1.077 -3.75 1.077c-.729 0 -2.036 -1.077 -3.214 -1.077z" />
-                    <path d="M12 4a2 2 0 0 0 2 -2a2 2 0 0 0 -2 2" />
-                    </svg>
-                </div>
-                <p>Dolor sit amet consectetur adipisicing elit. Cupiditate culpa incidunt autem omnis magni corporis ipsa illum amet eaque voluptates asperiores ratione optio voluptate. </p>
-            </section>
-
-            <section class="servicio">
-                <h3>E-Commerce</h3>
-                <div class="iconos">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="44"
-                        height="44"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#000000"
-                        stroke-width="1"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    >
-                        <path d="M12 19h-6a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v4.5" />
-                        <path d="M3 10h18" />
-                        <path d="M16 19h6" />
-                        <path d="M19 16l3 3l-3 3" />
-                        <path d="M7.005 15h.005" />
-                        <path d="M11 15h2" />
-                    </svg>
-                </div>
-                <p> Dolor sit amet consectetur adipisicing elit. Cupiditate culpa incidunt autem omnis magni corporis ipsa illum amet eaque voluptates asperiores ratione optio voluptate. </p>
-            </section>
-        </div>    
-    
-
-    <section>
-        <h2>Contacto</h2>
-        <form class="formulario">
-            <fieldset>
-                <legend>Contactame llenando los campos</legend>
-                <div class="contenedor-campos"> 
-                    <div class="campo">   
-                        <label>Nombre</label>
-                        <input class="input-text" type="text" placeholder="Escribe tu nombre">
-                    </div>
-                
-                    <div class="campo">
-                        <label>Telefono</label>
-                        <input class="input-text" type="tel" placeholder="Tu teléfono">
-                    </div>
-
-                    <div class="campo">
-                        <label>Correo</label>
-                        <input class="input-text" type="email" placeholder="Tu email">
-                    </div>
-
-                    <div class="campo">
-                        <label>Mensaje</label>
-                        <textarea class="input-text"></textarea>
-                    </div>
-                </div>
-            <div>
-                <input class="boton" type="submit" value="Enviar">
             </div>
-            </fieldset>
-        </form>
+        </div>
     </section>
-</main>
 
-    <footer class="footer">
-        <p>Todos los derechos reservados. Ricardo Martinez Salazar, Freelancer</p>
+    <main id="servicios" class="container py-5 my-5">
+        <h2 class="text-center text-morado fw-bold mb-5 fs-1">¿Por qué cambiarte a Internet KPAM?</h2>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card card-servicio border-0 shadow-sm h-100 p-4 text-center">
+                    <div class="card-body">
+                        <div class="icono-container d-flex justify-content-center align-items-center mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" /><path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" /><path d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+                        </div>
+                        <h3 class="h4 fw-bold mb-3">Velocidad Simétrica</h3>
+                        <p class="text-claro mb-0">La misma velocidad para subir que para descargar. Ideal para hacer streams, subir videos o trabajar desde casa sin trabas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card card-servicio border-0 shadow-sm h-100 p-4 text-center">
+                    <div class="card-body">
+                        <div class="icono-container d-flex justify-content-center align-items-center mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3" /></svg>
+                        </div>
+                        <h3 class="h4 fw-bold mb-3">Red 100% Estable</h3>
+                        <p class="text-claro mb-0">Nuestra infraestructura es completamente de fibra hasta tu módem, lo que garantiza que no se caiga cuando llueve.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card card-servicio border-0 shadow-sm h-100 p-4 text-center">
+                    <div class="card-body">
+                        <div class="icono-container d-flex justify-content-center align-items-center mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 9h8" /><path d="M8 13h6" /><path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" /></svg>
+                        </div>
+                        <h3 class="h4 fw-bold mb-3">Soporte por WhatsApp</h3>
+                        <p class="text-claro mb-0">¿Problemas? Te respondemos por mensaje en menos de 5 minutos sin tener que hablar con máquinas contestadoras.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section id="contacto" class="bg-white py-5">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-md-6">
+                    <h2 class="text-morado fw-bold fs-1 mb-4">¿Listo para la mejor conexión?</h2>
+                    <p class="text-claro fs-5">Déjanos tus datos. Un asesor revisará tu ubicación y te contactará para agendar tu instalación gratis hoy mismo.</p>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="bg-light p-5 rounded-4 shadow-sm">
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Tu Nombre</label>
+                                <input type="text" class="form-control form-control-lg border-0" placeholder="Ej. Ana Gómez">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Teléfono Celular</label>
+                                <input type="tel" class="form-control form-control-lg border-0" placeholder="A 10 dígitos">
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">Dirección a instalar</label>
+                                <textarea class="form-control form-control-lg border-0" rows="3" placeholder="Calle, número, colonia..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-morado w-100 btn-lg">Enviar Solicitud</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">INTERNET KPAM © 2026. Proveedor de Servicios de Internet Local.</p>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
